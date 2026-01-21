@@ -1,0 +1,67 @@
+<section class="main">
+  <div class="container">
+    <div class="main-info wow animate__backInLeft">
+
+      <h1 class="double-title">
+        Самая лучшая пицца в мире
+        <span>только в Pizza Cheff</span>
+      </h1>
+
+      <div class="main-advantages">
+        <div class="advantage">
+          <div class="advantage-image">
+            <img src="assets/images/advantages/hop.png" alt="Hop" height="60" width="60">
+          </div>
+          <div class="advantage-text">
+            <div class="advantage-title">Лучшее тесто</div>
+            <div class="advantage-description">
+              Мы создаем тесто только из отборной итальянской муки
+              наивысшего качества
+            </div>
+          </div>
+        </div>
+        <div class="advantage">
+          <div class="advantage-image">
+            <img src="assets/images/advantages/kitchen-pack.png" alt="kitchen-pack" height="60" width="60">
+          </div>
+          <div class="advantage-text">
+            <div class="advantage-title">лучшие повара</div>
+            <div class="advantage-description">Пиццы готовят самые профессиональные
+              итальянские повара
+            </div>
+          </div>
+        </div>
+        <div class="advantage">
+          <div class="advantage-image">
+            <img src="assets/images/advantages/seo-and-web.png" alt="Seo-and-web" height="60" width="60">
+          </div>
+          <div class="advantage-text">
+            <div class="advantage-title">гарантия качества</div>
+            <div class="advantage-description">Наша пиццерия получила множество наград и
+              признаний по всему миру
+            </div>
+          </div>
+        </div>
+        <div class="advantage">
+          <div class="advantage-image">
+            <img src="assets/images/advantages/holidays.png" alt="Holidays" height="56" width="60">
+          </div>
+          <div class="advantage-text">
+            <div class="advantage-title">отборные рецепты</div>
+            <div class="advantage-description">Мы используем рецепты от мировых лидеров
+              в изготовлении пиццы
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="main-action">
+        <a (click)="test()" class="btn hvr-sweep-to-right open-popup-link">Выбрать пиццу</a>
+      </div>
+    </div>
+    <div class="main-image animate__animated animate__backInRight">
+      <img src="assets/images/pizza_big.png" alt="Pizza" height="342" width="520">
+    </div>
+  </div>
+</section>
+
+<app-popup [data]="'main component'"></app-popup>

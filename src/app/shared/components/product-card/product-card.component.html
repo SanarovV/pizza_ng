@@ -1,0 +1,27 @@
+<div class="product wow animate__fadeInTopLeft">
+
+  <div *ngIf="product.image; then productImageBlock else defaultImageBlock"></div>
+
+  <ng-template #productImageBlock>
+    <a class="product-image hvr-bounce-in" href="assets/images/products/product1.png">
+      <img src="{{product.image}}" height="152" width="214">
+    </a>
+  </ng-template>
+
+  <ng-template #defaultImageBlock>
+    <a class="product-image hvr-bounce-in" href="assets/images/products/product1.png">
+      <img src="assets/images/pizzzzza.png" height="152" width="214">
+    </a>
+  </ng-template>
+
+
+  <custom-title [title]="product.title | uppercase"></custom-title>
+  <div class="product-text">{{ product.description | wordUpper: ['сыр', 'томат', 'сос'] }}</div>
+  <div class="product-action" #elem>
+    <a class="btn btn-add-to-cart hvr-sweep-to-right" routerLink="/order"
+    [queryParams]="{product: product.title}">В корзину</a>
+    <a class="btn btn-white" [routerLink]="['/products', product.id]">Подробнее</a>
+  </div>
+  <!--  <div>{{product.datetime | date: 'full' | uppercase}}</div>-->
+</div>
+<!--(click)="addToCart(product, orderElement)"-->
